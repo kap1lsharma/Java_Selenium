@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DB.DB">
+      <class name="com.qa.sparta.tests.LoginPageTest">
         <methods>
-          <include name="Query"/>
+          <include name="LoginTest"/>
+          <include name="quit"/>
+          <include name="setup"/>
+          <include name="forgePassLink"/>
         </methods>
-      </class> <!-- DB.DB -->
+      </class> <!-- com.qa.sparta.tests.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
