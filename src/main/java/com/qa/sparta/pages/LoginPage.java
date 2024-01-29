@@ -28,15 +28,15 @@ public class LoginPage {
 
 	// Page Actions/methods
 	public String getPageTitle() {
-				
+
 		String Title = eleUtil.waitForTitleIs("Sparta", 5);
-		System.out.println("Login Page Title is : " +Title);
+		System.out.println("Login Page Title is : " + Title);
 		return Title;
 	}
 
 	public String getPageURL() {
 		String URL = eleUtil.waitForURLContains("sparta.satsure", 5);
-		System.out.println("Login Page URL is : "+URL);
+		System.out.println("Login Page URL is : " + URL);
 		return URL;
 	}
 
@@ -50,12 +50,12 @@ public class LoginPage {
 		System.out.println("Login cred are " + email + " : " + pswrd);
 		eleUtil.waitForElementVisible(emailID, 10).sendKeys(email);
 		Thread.sleep(2000);
-		 
+
 		eleUtil.doSendKeys(password, pswrd);
 		Thread.sleep(2000);
-		eleUtil.doClick(CtnBtn);	
+		eleUtil.doClick(CtnBtn);
 		return eleUtil.waitForTitleIs("sparta", 10);
-		
+
 //		driver.findElement(DashboardPage).isDisplayed();
 
 	}

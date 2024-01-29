@@ -1,5 +1,7 @@
 package com.qa.sparta.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +12,14 @@ import com.qa.sparta.base.BaseTest;
 
 public class LoginPageTest extends BaseTest {
 
+	public static final Logger logger = LogManager.getLogger(LoginPageTest.class);
 	// Verifying the Page Title
 	@Test(priority = 1)
 	public void LoginPageTitleTest() {
 
 		String actualTitle = loginPage.getPageTitle();
 		Assert.assertEquals(actualTitle, "Sparta");
+		logger.info("This is test for log message");
 
 	}
 
